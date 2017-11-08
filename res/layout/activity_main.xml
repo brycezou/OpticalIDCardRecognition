@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="说明：点击第一张图片开始身份证识别" 
+        android:textColor="#FFFFFF"/>
+    <ImageView 
+        android:id="@+id/imgBmpIn"
+        android:onClick="OnButtonRecognizeIDCard"
+        android:layout_width="fill_parent"
+        android:layout_height="265dp" 
+        android:background="#000000"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:text=""/>
+    <ImageView 
+        android:id="@+id/imgBmpOut"
+        android:layout_width="fill_parent"
+        android:layout_height="265dp" 
+        android:background="#000000"/>
+    
+</LinearLayout>
