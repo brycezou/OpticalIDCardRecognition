@@ -73,7 +73,7 @@ public class OpticalIDCardRecognition extends Activity
     	   for(int i=0; i<fileNameArray.length; i++)
     	   {
     		   if(!copyFile(fileNameArray[i], "/sdcard/OpticalIDCardRecognition/"+fileNameArray[i]))
-    			   Toast.makeText(this, "文件"+fileNameArray[i]+"读取失败!", Toast.LENGTH_SHORT).show();  
+    			   Toast.makeText(this, "文件"+fileNameArray[i]+"创建失败!", Toast.LENGTH_SHORT).show();  
     	   }
        }       
 	}
@@ -170,7 +170,7 @@ public class OpticalIDCardRecognition extends Activity
 				bIsProcessingImg = false;
 				break;
 			case 2:
-				OnShowDlg("身份证识别错误，请重新拍摄!");
+				OnShowDlg("身份证识别失败, 请重新采集图片!");
 				bIsProcessingImg = false;
 				break;
 			}
@@ -216,7 +216,7 @@ public class OpticalIDCardRecognition extends Activity
 
             FileOutputStream fots = new FileOutputStream(book_file, true);   
             byte[] buffer = new byte[fileLength];  
-            int readCount = 0;
+            int readCount = 0;	 //已经成功读取的字节的个数  
             while (readCount < fileLength) 
             {  
                 readCount += its.read(buffer, readCount, fileLength - readCount);  
